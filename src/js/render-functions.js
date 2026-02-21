@@ -9,17 +9,17 @@ export function createGallery(images) {
   const createLi = images
     .map(
       ({
+        webformatURL,
         comments,
         downloads,
         likes,
         largeImageURL,
         tags,
         views,
-        previewURL,
       }) =>
         `<li class="gallery-item">
             <a class="gallery-link" href="${largeImageURL}">
-            <img src="${previewURL}" alt="${tags}">
+            <img src="${webformatURL}" alt="${tags}">
             </a>
         <ul class="description-list">
             <li class="description-item">comments ${comments}</li>
