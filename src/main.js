@@ -9,7 +9,7 @@ import {
   clearGallery,
   showLoadMoreButton,
   hideLoadMoreButton,
-} from './js/render-function';
+} from './js/render-functions';
 
 let page = 1;
 let input = '';
