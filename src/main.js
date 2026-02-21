@@ -23,10 +23,9 @@ async function handleSubmit(event) {
   const newInput = event.target.elements['search-text'].value.trim();
   if (!newInput) return message('Невалидный ввод');
 
-  if (newInput !== input) {
-    page = 1;
-    clearGallery();
-  }
+  page = 1;
+  clearGallery();
+
   input = newInput;
 
   hideLoadMoreButton();
@@ -70,13 +69,15 @@ async function loadMore() {
     createGallery(data.hits);
 
     const galleryItem = document.querySelector('.gallery-item');
-    const cardHeight = galleryItem.getBoundingClientRect().height;
-    console.log(cardHeight);
-    window.scrollBy({
-      left: 0,
-      top: cardHeight * 2,
-      behavior: 'smooth',
-    });
+    if (galleryItem) {
+      const cardHeight = galleryItem.getBoundingClientRect().height;
+      console.log(cardHeight);
+      window.scrollBy({
+        left: 0,
+        top: cardHeight * 2,
+        behavior: 'smooth',
+      });
+    }
 
     const totalPages = Math.ceil(data.totalHits / perPage);
     if (page < totalPages) {
