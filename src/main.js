@@ -47,7 +47,7 @@ async function handleSubmit(event) {
     if (page < totalPages) {
       showLoadMoreButton();
     } else {
-      message('Sorry this is all Gallery by your seach');
+      message('Sorry, thats all for your search.');
       hideLoadMoreButton();
     }
   } catch (error) {
@@ -83,7 +83,7 @@ async function loadMore() {
       showLoadMoreButton();
     } else {
       hideLoadMoreButton();
-      message('Sorry this is all Gallery by your seach');
+      message('Sorry, thats all for your search.');
     }
   } catch (error) {
     message(
