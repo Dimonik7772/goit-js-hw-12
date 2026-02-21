@@ -47,6 +47,7 @@ async function handleSubmit(event) {
     if (page < totalPages) {
       showLoadMoreButton();
     } else {
+      message('Sorry this is all Gallery by your seach');
       hideLoadMoreButton();
     }
   } catch (error) {
