@@ -1,0 +1,25 @@
+.btn-load-more {
+  display: block;
+  box-sizing: border-box;
+
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4e75ff;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.btn-load-more:hover {
+  border-color: #6c8cff;
+}
+.btn-load-more:hover {
+  background-color: #6c8cff;
+}
+.hidden {
+  display: none;
+}
